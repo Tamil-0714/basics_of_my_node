@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>    <style>
+      table {
+          border-collapse: collapse;
+          width: 100%;
+      }
+
+      th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+      }
+
+      th {
+          background-color: #f2f2f2;
+      }
+  </style>
+</head>
+<body>
+  <div id="jsonDataContainer">
+      <table id="dataTable">
+          <tr>
+              <th>Emp_ip</th>
+              <th>Ename</th>
+              <th>JobDec</th>
+              <th>Salary</th>
+              <th>dob</th>
+          </tr>
+      </table>
+  </div>
+    <script>
+      // JavaScript code to fetch and display JSON data from employee.json
+
+// Function to fetch JSON data from employee.json
+function fetchJSONData() {
+    fetch('employee.json')
+        .then(response => response.json())
+        .then(data => displayData(data))
+        .catch(error => console.error('Error fetching JSON:', error));
+}
+
+// Function to display the JSON data as a table on the page
+function displayData(data) {
+    const dataTable = document.getElementById('dataTable');
+
+    data.forEach(employee => {
+        const row = dataTable.insertRow();
+        for (const key in employee) {
+            const cell = row.insertCell();
+            cell.textContent = employee[key];
+        }
+    });
+}
+
+// Call the fetchJSONData function when the page loads
+document.addEventListener('DOMContentLoaded', fetchJSONData);
+
+    </script>
+  </body>
+</html>
+<!-- 
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, deleniti?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dicta provident, ad officiis recusandae sequi consequatur temporibus! Deserunt, tenetur nesciunt?</p>
+    <div
+      class="container"
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <div
+        class="blue-box"
+        style="background-color: blue; width: 300px; height: 300px"
+      ></div>
+    </div> -->

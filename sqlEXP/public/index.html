@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User List</title>
+  <style>
+    table {
+          border-collapse: collapse;
+          width: 100%;
+      }
+
+      th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+      }
+
+      th {
+          background-color: #f2f2f2;
+      }
+  </style>
+</head>
+<body>
+  <h2>User List</h2>
+  <table id="user-table">
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Name</th>
+        <th>Job Description</th>
+        <th>Salary</th>
+        <th>Date of Birth</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Table rows will be dynamically populated here -->
+    </tbody>
+  </table>
+
+  <script>
+    fetch("/user")
+      .then((res) => res.json())
+      .then((data) => {
+        const userTable = document.getElementById("user-table");
+
+        data.forEach((user) => {
+          const row = document.createElement("tr");
+
+          const empIpCell = document.createElement("td");
+          empIpCell.textContent = user.Emp_ip;
+          row.appendChild(empIpCell);
+
+          const enameCell = document.createElement("td");
+          enameCell.textContent = user.Ename;
+          row.appendChild(enameCell);
+
+          const jobDescCell = document.createElement("td");
+          jobDescCell.textContent = user.JobDec;
+          row.appendChild(jobDescCell);
+
+          const salaryCell = document.createElement("td");
+          salaryCell.textContent = user.Salary;
+          row.appendChild(salaryCell);
+
+          const dobCell = document.createElement("td");
+          // Format the date to a more readable format
+          const dob = new Date(user.dob).toLocaleDateString();
+          dobCell.textContent = dob;
+          row.appendChild(dobCell);
+
+          userTable.querySelector("tbody").appendChild(row);
+        });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  </script>
+</body>
+</html>

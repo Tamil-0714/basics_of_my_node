@@ -1,0 +1,76 @@
+[
+  {
+    "Emp_ip": 1,
+    "Ename": "TaMiL",
+    "JobDec": "Manager",
+    "Salary": 50000,
+    "dob": "2004-08-31T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 2,
+    "Ename": "Jane Doe",
+    "JobDec": "Developer",
+    "Salary": 40000,
+    "dob": "2006-06-18T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 3,
+    "Ename": "Michael Johnson",
+    "JobDec": "Analyst",
+    "Salary": 35000,
+    "dob": "2004-08-31T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 4,
+    "Ename": "Emily Williams",
+    "JobDec": "Designer",
+    "Salary": 45000,
+    "dob": "2004-08-31T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 5,
+    "Ename": "Robert Brown",
+    "JobDec": "Developer",
+    "Salary": 30000,
+    "dob": "2006-06-18T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 6,
+    "Ename": "Sarah Davis",
+    "JobDec": "Accountant",
+    "Salary": 38000,
+    "dob": "2004-08-31T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 8,
+    "Ename": "Jessica Taylor",
+    "JobDec": "Developer",
+    "Salary": 42000,
+    "dob": "2006-06-18T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 9,
+    "Ename": "Andrew Miller",
+    "JobDec": "Engineer",
+    "Salary": 47000,
+    "dob": "2004-08-31T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 10,
+    "Ename": "Olivia Anderson",
+    "JobDec": "Administrative Assistant",
+    "Salary": 32000,
+    "dob": "2004-08-31T18:30:00.000Z"
+  },
+  {
+    "Emp_ip": 1967,
+    "Ename": "Tamilarasan N",
+    "JobDec": "node developer",
+    "Salary": 97000,
+    "dob": "2023-07-23T18:30:00.000Z"
+  }
+]
+
+
+
+
