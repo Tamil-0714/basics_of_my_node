@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #646464;
+}
+h2{
+    text-align: center;
+    color: #000000;
+}
+.form-container{
+    background: white;
+    width: 350px;
+    height: 500px;
+    border-radius: 12px;
+    padding-top: 60px;
+}
+.login{
+    padding-top: 90px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    /* outline: 1px solid red; */
+}
+.row input{
+    padding: 12px;
+    width: 78%;
+    border-radius: 5px;
+    font-size: 1.1em;
+    border: 1px solid black;
+    transition: 0.2s ease;
+}
+.pass{
+    position: relative;
+}
+.pass-icon{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    cursor: pointer;
+    top: 15px;
+    /* display:none !important; */
+}
+.row input:focus{
+    outline: none;
+    transform: scale(1.04);
+}
+/* .row input:focus + .fa-eye,
+.row input:focus + .fa-eye-slash {
+    display: block !important;
+} */
+
+
+.row button{
+    padding: 8px;
+    color: white;
+    background: #000;
+    width: 100px;
+    outline: none;
+    border: none;
+    transition: 0.2s ease;
+}
+.row button:hover{
+    color: #000;
+    background: white;
+    border: 1px solid black;
+}
+
+p{
+    text-align: center  ;
+}
+p a{
+    text-decoration: none;
+}
+p a:visited{
+    color: blue;
+}
