@@ -1,0 +1,4 @@
+npm i nodemon -D
+npm i express
+npm i pug
+npm i mysql2
