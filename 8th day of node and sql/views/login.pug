@@ -1,0 +1,18 @@
+extends layouts/form-layout.pug
+block content 
+    .form-container.login
+        h2 Sign in with your details 
+        form#frm(method="POST")
+            .row#user-id 
+                div.id-error #{msg}
+                input#userName(type="text" required="" placeholder="UserId" autocomplete="off" name="userName")
+                //- label UserId 
+            .row.pass 
+                input#password(type="password" required="" placeholder="Password" autocomplete="off" name="pass")
+                i.fa-solid.fa-eye-slash.pass-icon
+                //- label Password 
+            .row 
+                button(type="submit") Log in
+        p Don't have an account?
+            a(href="/register")  SignUp 
+    script(src="/js/script.js") 

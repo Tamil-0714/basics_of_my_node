@@ -1,0 +1,26 @@
+extends layouts/form-layout.pug
+block  content
+    - const passNotStyle = passNot ? passNot : ''
+    .form-container.signup 
+        h2 Create a new account 
+        h2(style="color:red;") #{fuckMsg}
+        form#frm(method="POST")
+            .row
+                input#name(type="text" required="" name="name" placeholder="Name" autocomplete="off" value=name)    
+            .row#user-id 
+                input#userName(type="text" required="" name="userId" placeholder="UserId" autocomplete="off" value=userId)   
+                div.id-error #{msg}
+                //- label UserId 
+            .row.pass 
+                input#password(type="password" style = passNotStyle required="" name="pass" placeholder="Password" autocomplete="off" )
+                i.fa-solid.fa-eye-slash.pass-icon
+                //- label Password 
+            .row.pass 
+                input#confirm(type="password" style = passNotStyle  required="" name="cpass" placeholder="Confirm Password" autocomplete="off" )
+                i.fa-solid.fa-eye-slash.pass-icon
+                //- label Confirm Password 
+            .row 
+                button(type="submit") Sign up
+        p already have an account?
+            a(href="/login")  Login 
+    script(src="/js/script.js") 

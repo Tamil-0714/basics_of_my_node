@@ -1,0 +1,6 @@
+extends layouts/home-layout.pug
+block content
+    +navBar()
+    h2 welcome to home page app js
+    a(href="/logout") Log out
+    p #{userDetails.userName}
